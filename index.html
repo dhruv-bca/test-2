@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>The Royal Union | Priyavrat &amp; Ayushi</title>
+    <link rel="icon" type="image/webp" href="icon.webp"/>
+    <link rel="apple-touch-icon" href="icon.webp"/>
+    <!-- Tailwind CSS with custom colors config -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@400;600;700;900&amp;family=Gotu&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-lowest": "#ffffff",
+                        "ink-black": "#050505",
+                        "surface": "#fbf9f1",
+                        "outline-variant": "#e2bfb9",
+                        "on-secondary-fixed": "#241a00",
+                        "antique-gold": "#D4AF37",
+                        "surface-variant": "#e4e3db",
+                        "surface-tint": "#b22b1d",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#eae8e0",
+                        "surface-dim": "#dcdad2",
+                        "heritage-cream": "#FFFDF5",
+                        "on-secondary-container": "#745c00",
+                        "secondary-container": "#fed65b",
+                        "inverse-surface": "#30312c",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#1b1c17",
+                        "primary": "#570000",
+                        "tertiary-fixed": "#b1eeea",
+                        "on-tertiary-container": "#76b1ae",
+                        "on-tertiary-fixed-variant": "#084f4d",
+                        "tertiary-fixed-dim": "#95d1ce",
+                        "on-background": "#1b1c17",
+                        "on-surface-variant": "#5a413d",
+                        "primary-fixed": "#ffdad4",
+                        "surface-container": "#f0eee6",
+                        "secondary-fixed-dim": "#e9c349",
+                        "secondary-fixed": "#ffe088",
+                        "royal-maroon": "#3B4E3E",
+                        "on-primary-fixed": "#1B241C",
+                        "tertiary": "#002c2b",
+                        "outline": "#8e706c",
+                        "on-secondary-fixed-variant": "#574500",
+                        "tertiary-container": "#004442",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f3f1e9",
+                        "surface-container-highest": "#e4e3db",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "background": "#faf8f5",
+                        "emerald-jewel": "#004B49",
+                        "secondary": "#735c00",
+                        "surface-bright": "#faf8f5",
+                        "on-primary-container": "#ff8371",
+                        "surface-container-low": "#f4f1ea",
+                        "primary-container": "#3B4E3E",
+                        "inverse-primary": "#ffb4a8",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#8f0f07",
+                        "on-tertiary-fixed": "#00201f",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "container-max": "1200px",
+                        "section-padding-h": "24px",
+                        "section-padding-v": "60px",
+                        "unit": "8px",
+                        "stack-gap": "32px",
+                        "gutter": "24px"
+                    },
+                    fontFamily: {
+                        "subheading-display": ["Cormorant"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-sm": ["Cormorant"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-lg": ["Cormorant"],
+                        "display-lg": ["Playfair Display"],
+                        "label-ui": ["Manrope"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "devanagari-mantra": ["Gotu"]
+                    },
+                    fontSize: {
+                        "subheading-display": ["20px", { "lineHeight": "28px", "letterSpacing": "0.3em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "600" }],
+                        "body-sm": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+                        "headline-lg": ["42px", { "lineHeight": "50px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "26px", "fontWeight": "400" }],
+                        "display-lg": ["80px", { "lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-ui": ["15px", { "lineHeight": "auto", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "devanagari-mantra": ["16px", { "lineHeight": "150%", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom Premium CSS Animations and Layout Refinements */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .shimmer-btn:hover {
+            background: linear-gradient(90deg, rgba(212,175,55,1) 0%, rgba(255,255,255,1) 50%, rgba(212,175,55,1) 100%);
+            background-size: 200% auto;
+            animation: shimmer 1.5s linear infinite;
+        }
+
+        @keyframes shimmer {
+            to { background-position: 200% center; }
+        }
+
+        .prop-drift {
+            position: fixed;
+            pointer-events: none;
+            z-index: 10;
+            will-change: transform, opacity;
+        }
+
+        /* 3D Envelope Opening Animations */
+        #opening-overlay {
+            perspective: 1000px;
+            transition: opacity 1s ease-in-out;
+        }
+
+        #envelope-container {
+            transform-style: preserve-3d;
+            transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Crack seal animation */
+        .seal-crack {
+            animation: crack 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) forwards;
+        }
+
+        @keyframes crack {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            50% { transform: translate(-50%, -50%) scale(1.15) rotate(15deg); opacity: 0.9; }
+            100% { transform: translate(-50%, -50%) scale(0.6) rotate(-30deg); opacity: 0; filter: blur(3px); }
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background: linear-gradient(to bottom, transparent, #D4AF37 15%, #D4AF37 85%, transparent);
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Scroll-triggered reveal animations */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stylized custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFFDF5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3B4E3E;
+        }
+
+        /* Cover screen slide up */
+        #cover-screen.open {
+            transform: translateY(-100%);
+        }
+
+        /* Bride and groom tilt sway loops */
+        .tilt-sway-left-loop {
+            animation: tilt-sway-left 7s ease-in-out infinite;
+        }
+        .tilt-sway-right-loop {
+            animation: tilt-sway-right 7s ease-in-out infinite;
+        }
+
+        @keyframes tilt-sway-left {
+            0%, 100% { transform: rotate(-5deg) scale(1.08); }
+            50% { transform: rotate(5deg) scale(1.08); }
+        }
+        @keyframes tilt-sway-right {
+            0%, 100% { transform: rotate(5deg) scale(1.08); }
+            50% { transform: rotate(-5deg) scale(1.08); }
+        }
+    </style>
+</head>
+<body class="bg-heritage-cream text-ink-black font-body-lg overflow-x-hidden">
+
+<div class="fixed inset-0 z-[100] flex items-center justify-center bg-[#1B241C] overflow-hidden transition-all duration-1000 cursor-pointer" id="opening-overlay" onclick="openInvitation()">
+    <!-- Starry/Particle Background for Envelope -->
+    <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px); background-size: 550px 550px;"></div>
+    
+    <div class="relative w-[95%] max-w-[440px] aspect-[4/3] cursor-pointer" id="envelope-container" onclick="openInvitation()">
+        <!-- Envelope Shadow & Soft Glow -->
+        <div class="absolute inset-0 bg-black/60 rounded-xl blur-xl transition-all duration-700 group-hover:blur-2xl"></div>
+        
+        <!-- 3D Envelope Base Body -->
+        <div class="absolute inset-0 bg-[#3B4E3E] border border-antique-gold/30 rounded-xl shadow-2xl overflow-hidden" id="envelope-body">
+            <!-- Envelope Paper Texture -->
+            <img alt="Envelope Texture" class="absolute inset-0 w-full h-full object-cover opacity-35 mix-blend-multiply" src="resources/envelope_bg.jpg"/>
+            
+            <!-- Inner Invitation Card (slides up) -->
+            <div class="absolute inset-x-4 top-4 bottom-4 bg-[#FAF8F5] border-2 border-antique-gold/40 rounded-lg shadow-inner flex flex-col items-center justify-center p-6 text-center transition-all duration-[1.6s] ease-in-out z-10" id="invitation-card" style="transform: translateY(0);">
+                <img alt="Gold Mandala" class="w-16 h-16 opacity-20 animate-[spin_60s_linear_infinite] mb-4" src="resources/mandala.png" />
+                <span class="font-subheading-display text-royal-maroon text-xs tracking-[0.3em] uppercase mb-1 font-bold">The Royal Union Of</span>
+                <h1 class="font-display-lg text-2xl text-royal-maroon mb-2 font-bold">Priyavrat &amp; Ayushi</h1>
+                <div class="w-16 h-[1px] bg-antique-gold/50 my-2"></div>
+                <p class="font-devanagari-mantra text-royal-maroon/80 text-xs mb-3">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ</p>
+                <div class="text-[10px] text-royal-maroon/60 tracking-[0.25em] font-subheading-display mt-2 font-bold">TAP WAX SEAL TO OPEN</div>
+            </div>
+            
+            <!-- Envelope Left Flap (Left Triangle) -->
+            <div class="absolute left-0 bottom-0 top-0 w-1/2 bg-[#516C56] z-20 shadow-[6px_0_15px_rgba(0,0,0,0.1)]" style="clip-path: polygon(0 0, 100% 50%, 0 100%); border-right: 1px solid rgba(197, 160, 89, 0.15);"></div>
+            <!-- Envelope Right Flap (Right Triangle) -->
+            <div class="absolute right-0 bottom-0 top-0 w-1/2 bg-[#516C56] z-20 shadow-[-6px_0_15px_rgba(0,0,0,0.1)]" style="clip-path: polygon(100% 0, 100% 100%, 0 50%); border-left: 1px solid rgba(197, 160, 89, 0.15);"></div>
+            <!-- Envelope Bottom Flap (Bottom Triangle) -->
+            <div class="absolute inset-x-0 bottom-0 h-[60%] bg-[#425946] z-20 shadow-[0_-6px_15px_rgba(0,0,0,0.15)]" style="clip-path: polygon(0 100%, 50% 0, 100% 100%); border-top: 1px solid rgba(197, 160, 89, 0.2);"></div>
+            
+            <!-- Envelope Top Flap (Opens upwards with rotateX) -->
+            <div class="absolute inset-x-0 top-0 h-[50%] bg-[#627D68] border-b border-antique-gold/15 shadow-md origin-top transition-transform duration-[1s] ease-in-out z-30" id="top-flap" style="clip-path: polygon(0 0, 100% 0, 50% 100%); transform: rotateX(0deg);"></div>
+            
+            <!-- Wax Seal Button with Favicon Icon -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full border-2 border-antique-gold bg-[#121813] shadow-[0_4px_16px_rgba(0,0,0,0.7)] flex items-center justify-center transition-all duration-[0.8s] z-40 cursor-pointer hover:scale-110 active:scale-95 overflow-hidden ring-2 ring-antique-gold/40" id="wax-seal" onclick="openInvitation()">
+                <img alt="Royal Crown Emblem" class="w-full h-full object-cover rounded-full" src="icon.webp"/>
+            </div>
+        </div>
+        
+        <div class="absolute -bottom-16 left-0 right-0 text-center text-antique-gold font-subheading-display text-sm tracking-[0.4em] animate-pulse">
+            TAP TO UNVEIL
+        </div>
+    </div>
+</div>
+
+<!-- Drifting Props Layer (Rose Petals, Marigold, Mango Leaves, and floating lanterns) -->
+<div id="prop-container" class="fixed inset-0 pointer-events-none z-10 overflow-hidden"></div>
+
+<!-- Navigation Header -->
+<header class="fixed top-0 left-0 right-0 z-50 glass-nav bg-heritage-cream/80 border-b border-outline-variant/30 hidden" id="main-nav">
+    <div class="max-w-container-max mx-auto px-section-padding-h h-20 flex justify-between items-center">
+        <a href="#hero" class="flex items-center gap-2.5 group">
+            <img src="icon.webp" alt="Logo" class="w-9 h-9 object-contain rounded-md shadow-sm border border-antique-gold/40 group-hover:scale-105 transition-transform">
+            <span class="font-display-lg text-subheading-display text-royal-maroon tracking-tighter text-xl md:text-2xl font-bold">Royal Heritage</span>
+        </a>
+        <nav class="hidden md:flex gap-unit space-x-6 items-center">
+            <a class="font-subheading-display text-sm tracking-widest text-royal-maroon font-bold border-b-2 border-antique-gold pb-1 transition-all duration-300" href="#hero">WELCOME</a>
+            <a class="font-subheading-display text-sm tracking-widest text-on-surface-variant hover:text-antique-gold transition-colors" href="#couple">THE COUPLE</a>
+            <a class="font-subheading-display text-sm tracking-widest text-on-surface-variant hover:text-antique-gold transition-colors" href="#journey">OUR JOURNEY</a>
+            <a class="font-subheading-display text-sm tracking-widest text-on-surface-variant hover:text-antique-gold transition-colors" href="#ceremonies">CEREMONIES</a>
+            <a class="font-subheading-display text-sm tracking-widest text-on-surface-variant hover:text-antique-gold transition-colors" href="#itinerary">ITINERARY</a>
+            <a class="font-subheading-display text-sm tracking-widest text-on-surface-variant hover:text-antique-gold transition-colors" href="#contacts">CONTACTS</a>
+            <a class="bg-royal-maroon text-antique-gold px-6 py-2 rounded-full font-label-ui text-sm shimmer-btn transition-transform active:scale-95" href="#rsvp">RSVP</a>
+        </nav>
+        <button class="md:hidden text-royal-maroon focus:outline-none" onclick="toggleMobileMenu()">
+            <span class="material-symbols-outlined" id="menu-icon">menu</span>
+        </button>
+    </div>
+    <!-- Mobile Menu dropdown -->
+    <div class="hidden bg-heritage-cream/95 border-b border-outline-variant/30 flex flex-col p-6 space-y-4 md:hidden shadow-lg" id="mobile-menu">
+        <a class="font-subheading-display text-sm tracking-widest text-royal-maroon" href="#hero" onclick="toggleMobileMenu()">WELCOME</a>
+        <a class="font-subheading-display text-sm tracking-widest text-on-surface-variant" href="#couple" onclick="toggleMobileMenu()">THE COUPLE</a>
+        <a class="font-subheading-display text-sm tracking-widest text-on-surface-variant" href="#journey" onclick="toggleMobileMenu()">OUR JOURNEY</a>
+        <a class="font-subheading-display text-sm tracking-widest text-on-surface-variant" href="#ceremonies" onclick="toggleMobileMenu()">CEREMONIES</a>
+        <a class="font-subheading-display text-sm tracking-widest text-on-surface-variant" href="#itinerary" onclick="toggleMobileMenu()">ITINERARY</a>
+        <a class="font-subheading-display text-sm tracking-widest text-on-surface-variant" href="#contacts" onclick="toggleMobileMenu()">CONTACTS</a>
+        <a class="bg-royal-maroon text-antique-gold text-center py-3 rounded-full font-label-ui text-sm" href="#rsvp" onclick="toggleMobileMenu()">RSVP NOW</a>
+    </div>
+</header>
+
+<!-- Main Page Content (10 Scrollable Sections) -->
+<main class="relative z-20">
+
+    <!-- Page 1: Hero Welcome Section -->
+    <section class="relative min-h-[140vh] md:min-h-screen flex flex-col justify-between overflow-hidden bg-heritage-cream" id="hero">
+        <!-- Top Beach Background Part -->
+        <div class="relative w-full h-[60vh] md:h-[55vh] flex flex-col items-center justify-center text-center px-6" style="background-image: url('resources/beach_wedding.png'); background-size: cover; background-position: center;">
+            <!-- Overlay for contrast -->
+            <div class="absolute inset-0 bg-black/15"></div>
+            
+            <!-- Names from the screenshot -->
+            <div class="relative z-10 select-none">
+                <h1 class="font-display-lg text-white mb-2 leading-tight tracking-[0.1em] text-5xl md:text-8xl uppercase font-bold drop-shadow-lg">Priyavrat</h1>
+                <div class="font-subheading-display text-white/95 italic text-xl md:text-3xl my-2 tracking-[0.25em] font-medium drop-shadow-md">WEDS</div>
+                <h1 class="font-display-lg text-white leading-tight tracking-[0.1em] text-5xl md:text-8xl uppercase font-bold drop-shadow-lg">Ayushi</h1>
+            </div>
+        </div>
+        
+        <!-- Bottom Purple Part -->
+        <div class="relative w-full bg-[#342445] flex flex-col items-center justify-start text-white text-center pb-20 pt-28 px-6 z-10 -mt-16 md:-mt-24 shadow-2xl" style="clip-path: polygon(0 60px, 50% 0, 100% 60px, 100% 100%, 0% 100%);">
+            <!-- White subtle outline tracing the triangle -->
+            <div class="absolute top-0 inset-x-0 h-[60px] pointer-events-none" style="clip-path: polygon(0 60px, 50% 0, 100% 60px, 100% 58px, 50% 2px, 0 58px); background-color: rgba(220, 199, 160, 0.25);"></div>
+
+            <!-- Ganesha motif -->
+            <div class="mb-6 reveal-element">
+                <!-- White line Ganesha illustration SVG -->
+                <svg class="w-20 h-20 text-white fill-none stroke-current stroke-[1.25]" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 4c-5.5 0-10 4.5-10 10 0 3.3 1.6 6.2 4.1 8-5.1 2.8-8.1 8-8.1 14 0 8.8 7.2 16 16 16s16-7.2 16-16c0-6-3-11.2-8.1-14 2.5-1.8 4.1-4.7 4.1-8 0-5.5-4.5-10-10-10z" />
+                    <path d="M32 14c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z" />
+                    <path d="M32 44V22" />
+                    <path d="M22 36c4.5 2.5 15.5 2.5 20 0" />
+                    <path d="M24 41c3.5 1.5 12.5 1.5 16 0" />
+                    <path d="M32 20c0 3-3 5-3 8s3 5 3 8" />
+                </svg>
+            </div>
+            
+            <!-- Blessings text -->
+            <div class="max-w-xl mx-auto space-y-4 font-headline-sm reveal-element">
+                <p class="font-devanagari-mantra text-[#dcc7a0] text-sm tracking-widest uppercase">ॐ श्री गणेशाय नमः</p>
+                <p class="text-xs md:text-sm tracking-[0.25em] text-[#dcc7a0] uppercase font-semibold">With the heavenly blessings of elders &amp; ancestors</p>
+                <p class="text-lg md:text-2xl font-medium tracking-wide text-white">Sharma Family &amp; Priya Family</p>
+                
+                <div class="w-16 h-[1px] bg-[#dcc7a0]/30 mx-auto my-4"></div>
+                
+                <p class="text-md md:text-lg font-medium text-white/95">Mr. Chhote Lal Sharma &amp; Family</p>
+                
+                <p class="font-subheading-display text-xs md:text-sm tracking-[0.3em] uppercase text-[#dcc7a0] mt-8">CORDIALLY INVITE</p>
+                <p class="text-xs md:text-sm tracking-widest text-white/80">You to join us in celebrating the auspicious wedding union of</p>
+                
+                <h3 class="text-3xl md:text-5xl font-bold tracking-wider text-white mt-6 font-display-lg">Priyavrat &amp; Ayushi</h3>
+            </div>
+            
+            <!-- Open Invitation Button -->
+            <div class="mt-12 reveal-element">
+                <button onclick="scrollToCouple()" class="bg-[#dcc7a0] text-[#342445] px-12 py-4 rounded-full font-label-ui text-sm tracking-widest uppercase shimmer-btn font-bold shadow-md hover:bg-white hover:scale-105 active:scale-95 transition-all duration-300">
+                    Open Invitation
+                </button>
+            </div>
+        </div>
+        
+        <!-- Floating Parallax Lanterns Layer (Inside Hero Only!) -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden z-20" id="hero-lanterns">
+            <img src="resources/glowing_lantern.png" class="parallax-lantern absolute w-14 top-[3%] left-[6%] opacity-90" data-speed="1.3" alt="lantern">
+            <img src="resources/glowing_lantern.png" class="parallax-lantern absolute w-20 top-[6%] right-[8%] opacity-85" data-speed="0.75" alt="lantern">
+            <img src="resources/glowing_lantern.png" class="parallax-lantern absolute w-10 top-[18%] left-[18%] opacity-70" data-speed="1.6" alt="lantern">
+            <img src="resources/glowing_lantern.png" class="parallax-lantern absolute w-16 top-[15%] right-[22%] opacity-80" data-speed="1.0" alt="lantern">
+            <img src="resources/glowing_lantern.png" class="parallax-lantern absolute w-12 top-[30%] left-[10%] opacity-75" data-speed="1.4" alt="lantern">
+            <img src="resources/glowing_lantern.png" class="parallax-lantern absolute w-14 top-[26%] right-[4%] opacity-90" data-speed="0.85" alt="lantern">
+            <img src="resources/glowing_lantern.png" class="parallax-lantern absolute w-18 top-[40%] left-[25%] opacity-85" data-speed="1.15" alt="lantern">
+            <img src="resources/glowing_lantern.png" class="parallax-lantern absolute w-10 top-[35%] right-[16%] opacity-70" data-speed="1.8" alt="lantern">
+            <!-- Additional lanterns -->
+            <img src="resources/glowing_lantern.png" class="parallax-lantern absolute w-15 top-[10%] left-[45%] opacity-80" data-speed="1.1" alt="lantern">
+            <img src="resources/glowing_lantern.png" class="parallax-lantern absolute w-12 top-[22%] right-[45%] opacity-75" data-speed="1.5" alt="lantern">
+            <img src="resources/glowing_lantern.png" class="parallax-lantern absolute w-16 top-[45%] left-[8%] opacity-90" data-speed="1.25" alt="lantern">
+            <img src="resources/glowing_lantern.png" class="parallax-lantern absolute w-14 top-[48%] right-[12%] opacity-85" data-speed="0.9" alt="lantern">
+            <img src="resources/glowing_lantern.png" class="parallax-lantern absolute w-10 top-[55%] left-[40%] opacity-70" data-speed="1.7" alt="lantern">
+            <img src="resources/glowing_lantern.png" class="parallax-lantern absolute w-12 top-[60%] right-[30%] opacity-80" data-speed="1.35" alt="lantern">
+            <img src="resources/glowing_lantern.png" class="parallax-lantern absolute w-18 top-[68%] left-[15%] opacity-85" data-speed="1.05" alt="lantern">
+            <img src="resources/glowing_lantern.png" class="parallax-lantern absolute w-14 top-[72%] right-[25%] opacity-90" data-speed="1.55" alt="lantern">
+        </div>
+    </section>
+
+    <!-- Page 2: The Couple Profile Cards -->
+    <section class="py-12 md:py-24 bg-surface-container-low" id="couple">
+        <div class="max-w-container-max mx-auto px-4 md:px-section-padding-h">
+            <div class="text-center mb-12 md:mb-16 reveal-element">
+                <h2 class="font-headline-lg text-3xl md:text-5xl text-royal-maroon">Meet the Couple</h2>
+                <p class="font-subheading-display text-antique-gold text-xs md:text-sm tracking-[0.25em] mt-2">DIGNIFIED SOULS UNITED BY LOVE</p>
+                <div class="w-16 h-[1.5px] bg-antique-gold/50 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+                <!-- Groom Card -->
+                <div class="text-center group border border-antique-gold/20 p-6 md:p-8 rounded-2xl bg-white/40 hover:bg-white/90 shadow-sm hover:shadow-2xl transition-all duration-700 reveal-element">
+                    <div class="relative w-48 md:w-72 h-48 md:h-72 mx-auto mb-6 md:mb-8">
+                        <div class="absolute inset-0 border-2 border-dashed border-antique-gold rounded-full rotate-45 group-hover:rotate-[135deg] transition-transform duration-[1.5s]"></div>
+                        <div class="absolute inset-2 md:inset-3 rounded-full overflow-hidden border-4 border-heritage-cream shadow-md">
+                            <img alt="Priyavrat Sharma" class="w-full h-full object-cover transition-all duration-700 tilt-sway-left-loop" src="groom_priyavrat.jpg"/>
+                        </div>
+                    </div>
+                    <h3 class="font-headline-lg text-2xl md:text-3xl text-royal-maroon mb-1 font-bold">Priyavrat Sharma</h3>
+                    <p class="font-subheading-display tracking-widest text-xs md:text-sm text-antique-gold uppercase mb-3 font-bold">GROOM • SON OF SHARMA FAMILY (MR. CHHOTE LAL SHARMA &amp; FAMILY)</p>
+                    <p class="font-body-sm text-sm opacity-80 max-w-sm mx-auto italic leading-relaxed">"A dignified, warm-hearted soul grounded in heritage and family values, joyfully stepping forward into eternal companionship."</p>
+                    <div class="flex justify-center gap-4 mt-4 md:mt-6 border-t border-antique-gold/10 pt-4">
+                        <span class="inline-flex items-center gap-1.5 text-xs text-royal-maroon font-bold uppercase tracking-widest font-label-ui">
+                            <span class="material-symbols-outlined text-sm text-antique-gold">favorite</span> Priyavrat Sharma
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Bride Card -->
+                <div class="text-center group border border-antique-gold/20 p-6 md:p-8 rounded-2xl bg-white/40 hover:bg-white/90 shadow-sm hover:shadow-2xl transition-all duration-700 reveal-element">
+                    <div class="relative w-48 md:w-72 h-48 md:h-72 mx-auto mb-6 md:mb-8">
+                        <div class="absolute inset-0 border-2 border-dashed border-antique-gold rounded-full -rotate-45 group-hover:-rotate-[135deg] transition-transform duration-[1.5s]"></div>
+                        <div class="absolute inset-2 md:inset-3 rounded-full overflow-hidden border-4 border-heritage-cream shadow-md">
+                            <img alt="Ayushi Raj Priya" class="w-full h-full object-cover transition-all duration-700 tilt-sway-right-loop" src="2.jpeg"/>
+                        </div>
+                    </div>
+                    <h3 class="font-headline-lg text-2xl md:text-3xl text-royal-maroon mb-1 font-bold">Ayushi Raj Priya</h3>
+                    <p class="font-subheading-display tracking-widest text-xs md:text-sm text-antique-gold uppercase mb-3 font-bold">BRIDE • DAUGHTER OF PRIYA FAMILY</p>
+                    <p class="font-body-sm text-sm opacity-80 max-w-sm mx-auto italic leading-relaxed">"A radiant, graceful soul whose warmth and laughter illuminate every heart, ready to embark on a beautiful lifetime of love."</p>
+                    <div class="flex justify-center gap-4 mt-4 md:mt-6 border-t border-antique-gold/10 pt-4">
+                        <span class="inline-flex items-center gap-1.5 text-xs text-royal-maroon font-bold uppercase tracking-widest font-label-ui">
+                            <span class="material-symbols-outlined text-sm text-antique-gold">favorite</span> Ayushi Raj Priya
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 3: Interactive Centerpiece (Rotating Map Widget & Couple Portrait Slider) -->
+    <section id="centerpiece-section" class="py-20 relative flex flex-col justify-center items-center overflow-hidden bg-repeat" style="background-image: url('resources/green_bg_pattern.png'); background-size: 300px 300px;">
+        <!-- Overlay to match the green premium wedding theme -->
+        <div class="absolute inset-0 bg-[#E2EFDE]/85 mix-blend-multiply"></div>
+        
+        <div class="relative z-10 max-w-container-max mx-auto px-4 text-center flex flex-col items-center">
+            
+            <!-- Rotating Map Widget Container -->
+            <div class="relative w-[320px] md:w-[440px] h-[320px] md:h-[440px] reveal-element flex items-center justify-center">
+                <!-- Rotating Icons Ring -->
+                <img id="rotating-map-ring" src="resources/rotating_ring.png" alt="Rotating Event Icons" class="absolute inset-0 w-full h-full object-contain pointer-events-none z-0 transition-transform duration-100 ease-linear">
+                
+                <!-- Central Static Map Button Overlay (concentric, scaled to ~77% of the rotating ring to align the ring hole) -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[246px] md:w-[338px] h-[246px] md:h-[338px] z-10">
+                    <img src="resources/blue_circle_map_bg.png" alt="See the Route" class="w-full h-full object-contain pointer-events-none">
+                    <!-- Invisible Link overlay for map click -->
+                    <a href="https://maps.google.com/?q=Raj+Darbar+Banquet+Hall+Jagdeo+Path+Bailey+Road+Patna+Bihar" target="_blank" class="absolute inset-0 z-20 rounded-full cursor-pointer"></a>
+                </div>
+            </div>
+
+            <!-- Meet the Bride & Groom Content -->
+            <div class="text-center mt-12 mb-6 reveal-element flex flex-col items-center">
+                <!-- Top Hearts Mandala (meet_decor_top.png) -->
+                <img src="resources/meet_decor_top.png" alt="Hearts Ornament" class="w-[120px] md:w-[150px] object-contain mb-4 pointer-events-none">
+                <span class="font-subheading-display text-antique-gold text-xs tracking-[0.3em] font-bold block mb-2">MEET THE</span>
+                <h2 class="font-display-lg text-3xl md:text-5xl text-royal-maroon font-bold">Bride &amp; Groom</h2>
+                <div class="w-16 h-[1.5px] bg-antique-gold/50 mx-auto mt-4 mb-6"></div>
+                <p class="font-body-lg text-royal-maroon/90 max-w-xl mx-auto text-sm md:text-base leading-relaxed px-4">
+                    We are both so delighted that you are able to join us in celebrating when we hope will be one of the happiest days of our lives. The affection shown to us by so many people since our roka has been incredibly moving, and has touched us both deeply. We would like to take this opportunity to thank everyone most sincerely for their kindness. We are looking forward to see you at the wedding functions.
+                </p>
+            </div>
+            
+            <!-- Portrait Slider Mirror Frame -->
+            <div class="relative flex flex-col items-center mt-6 w-full reveal-element">
+                <div id="mirror-frame-container" class="relative w-[90%] max-w-[460px] aspect-square select-none z-10 flex items-center justify-center">
+                    <!-- Ornate Mirror Frame Overlay (meet_decor_bottom.png) -->
+                    <img src="resources/meet_decor_bottom.png" alt="Ornate Mirror Frame" class="absolute inset-0 w-full h-full object-contain pointer-events-none z-20">
+                    
+                    <!-- Swipe Frame (Carousel Slides) nested perfectly inside the transparent hole of the mirror frame -->
+                    <div id="swipe-frame" class="absolute left-[36.5%] top-[31.6%] w-[26.8%] h-[33.6%] overflow-hidden bg-surface-container-high shadow-inner z-10 cursor-grab active:cursor-grabbing" style="border-radius: 300px; touch-action: pan-y; isolation: isolate;">
+                        <!-- Carousel Slide Wrapper -->
+                        <div id="meet-slide-wrapper" class="flex w-[400%] h-full shrink-0 transition-transform duration-500 ease-in-out pointer-events-none">
+                            <img src="4.png" alt="Priyavrat &amp; Ayushi Wedding" class="w-1/4 h-full object-cover shrink-0 select-none">
+                            <img src="1.jpeg" alt="Celebrations &amp; Joy" class="w-1/4 h-full object-cover shrink-0 select-none">
+                            <img src="2.jpeg" alt="Bride Ayushi Raj Priya" class="w-1/4 h-full object-cover shrink-0 select-none">
+                            <img src="3.jpeg" alt="Priyavrat &amp; Ayushi" class="w-1/4 h-full object-cover shrink-0 select-none">
+                        </div>
+
+                        <!-- Carousel Dots Indicators (Exactly inside the frame overlaying the image, centered) -->
+                        <div class="absolute bottom-5 left-1/2 -translate-x-1/2 px-3 py-1.5 rounded-full bg-black/25 flex gap-1.5 z-20 pointer-events-auto">
+                            <button onclick="setSlide(0)" id="slide-dot-0" class="w-1.5 h-1.5 rounded-full bg-white transition-all duration-300" aria-label="Slide 1"></button>
+                            <button onclick="setSlide(1)" id="slide-dot-1" class="w-1.5 h-1.5 rounded-full bg-white/40 transition-all duration-300" aria-label="Slide 2"></button>
+                            <button onclick="setSlide(2)" id="slide-dot-2" class="w-1.5 h-1.5 rounded-full bg-white/40 transition-all duration-300" aria-label="Slide 3"></button>
+                            <button onclick="setSlide(3)" id="slide-dot-3" class="w-1.5 h-1.5 rounded-full bg-white/40 transition-all duration-300" aria-label="Slide 4"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Page 4: Our Journey (Parallax & Milestones Timeline) -->
+    <section class="py-section-padding-v max-w-container-max mx-auto px-section-padding-h relative" id="journey">
+        <h2 class="font-headline-lg text-3xl md:text-5xl text-royal-maroon text-center mb-20 reveal-element">Our Love Story</h2>
+        <div class="relative timeline-line space-y-24">
+            
+            <!-- Milestone 1 -->
+            <div class="flex flex-col md:flex-row items-center gap-gutter reveal-element w-full">
+                <div class="flex-1 w-full text-center md:text-right">
+                    <span class="font-subheading-display text-antique-gold text-sm tracking-widest block mb-1">THE FIRST CHAPTER</span>
+                    <h3 class="font-subheading-display text-royal-maroon text-2xl mb-2 font-bold">A Serendipitous Beginning</h3>
+                    <p class="font-body-lg text-on-surface-variant text-base">Two kindred souls united by destiny and strong family roots, embarking on a path adorned with shared values and deep mutual respect.</p>
+                </div>
+                <div class="w-12 h-12 rounded-full bg-royal-maroon border-4 border-antique-gold z-10 flex items-center justify-center text-antique-gold font-bold shadow-md my-4 md:my-0">1</div>
+                <div class="flex-1 w-full">
+                    <div class="w-full h-60 bg-surface-container-high rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-[1.03] transition-all duration-500 bg-cover bg-center" style="background-image: url('3.jpeg')"></div>
+                </div>
+            </div>
+
+            <!-- Milestone 2 -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-gutter reveal-element w-full">
+                <div class="flex-1 w-full text-center md:text-left">
+                    <span class="font-subheading-display text-antique-gold text-sm tracking-widest block mb-1">CHERISHED MOMENTS</span>
+                    <h3 class="font-subheading-display text-royal-maroon text-2xl mb-2 font-bold">Celebrations &amp; Togetherness</h3>
+                    <p class="font-body-lg text-on-surface-variant text-base">Blessed by family elders and surrounded by warmth and laughter, each day strengthened the bond of an enduring love story.</p>
+                </div>
+                <div class="w-12 h-12 rounded-full bg-royal-maroon border-4 border-antique-gold z-10 flex items-center justify-center text-antique-gold font-bold shadow-md my-4 md:my-0">2</div>
+                <div class="flex-1 w-full">
+                    <div class="w-full h-60 bg-surface-container-high rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-[1.03] transition-all duration-500 bg-cover bg-center" style="background-image: url('1.jpeg')"></div>
+                </div>
+            </div>
+
+            <!-- Milestone 3 -->
+            <div class="flex flex-col md:flex-row items-center gap-gutter reveal-element w-full">
+                <div class="flex-1 w-full text-center md:text-right">
+                    <span class="font-subheading-display text-antique-gold text-sm tracking-widest block mb-1">NOVEMBER 2026</span>
+                    <h3 class="font-subheading-display text-royal-maroon text-2xl mb-2 font-bold">The Royal Union</h3>
+                    <p class="font-body-lg text-on-surface-variant text-base">With sacred Vedic chants, joyful hearts, and divine blessings, Priyavrat and Ayushi step into holy matrimony forever.</p>
+                </div>
+                <div class="w-12 h-12 rounded-full bg-royal-maroon border-4 border-antique-gold z-10 flex items-center justify-center text-antique-gold font-bold shadow-md my-4 md:my-0">3</div>
+                <div class="flex-1 w-full">
+                    <div class="w-full h-60 bg-surface-container-high rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-[1.03] transition-all duration-500 bg-cover bg-center" style="background-image: url('4.png')"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Page 5: Detailed Ceremonies Grid -->
+    <section id="ceremonies" class="py-20 relative bg-repeat bg-[#0A2633]" style="background-image: url('resources/ceremonies_bg.png'); background-size: 300px 300px; overflow: hidden;">
+        <!-- Large Floating Crescent Moon on the left -->
+        <img src="resources/floating_moon.png" alt="Moon Decor" class="absolute left-[-50px] md:left-[2%] top-[12%] w-[120px] md:w-[180px] pointer-events-none z-0 transform rotate-[-7deg] opacity-90">
+        
+        <!-- Large Floating Hot Air Balloon on the top right -->
+        <img src="resources/floating_balloon.png" alt="Balloon Decor" class="absolute right-[-45px] md:right-[3%] top-[2%] w-[140px] md:w-[220px] pointer-events-none z-0 opacity-90">
+        
+        <!-- Large Floating Palace on the right middle -->
+        <img src="resources/floating_palace.png" alt="Palace Decor" class="absolute right-[-50px] md:right-[2%] top-[20%] w-[130px] md:w-[200px] pointer-events-none z-0 transform rotate-[-9deg] opacity-90">
+
+        <div class="relative z-10 max-w-container-max mx-auto px-4 md:px-section-padding-h text-center flex flex-col items-center">
+            <!-- Section Header -->
+            <div class="mb-16 reveal-element text-center flex flex-col items-center">
+                <!-- Gold Ganesha Motif -->
+                <img src="resources/gold_ganesha.png" alt="Ganesha Motif" class="w-[80px] md:w-[100px] object-contain mb-6 pointer-events-none">
+                
+                <p class="font-subheading-display text-xs md:text-sm tracking-[0.25em] text-[#ab9546] uppercase font-semibold">With the heavenly blessings of elders</p>
+                <p class="text-md md:text-lg font-medium tracking-wide text-white/95 mt-1">Sharma Family &amp; Priya Family</p>
+                
+                <div class="w-12 h-[1px] bg-[#ab9546]/30 mx-auto my-3"></div>
+                
+                <p class="text-xs md:text-sm tracking-widest text-white/85">Mr. Chhote Lal Sharma &amp; Family</p>
+                
+                <h3 class="font-display-lg text-4xl md:text-6xl tracking-[0.15em] text-antique-gold font-bold my-6 uppercase">CORDIALLY INVITE</h3>
+                
+                <p class="text-xs md:text-sm tracking-widest text-white/70 italic mb-4">You to join us in the auspicious wedding celebrations of</p>
+                
+                <h1 class="font-display-lg text-4xl md:text-6xl font-bold tracking-wider text-antique-gold font-bold">Priyavrat</h1>
+                <div class="font-subheading-display text-antique-gold italic text-xl md:text-2xl my-2">&amp;</div>
+                <h1 class="font-display-lg text-4xl md:text-6xl font-bold tracking-wider text-antique-gold font-bold">Ayushi</h1>
+                
+                <p class="font-body-lg text-[#ab9546] text-xs md:text-sm tracking-widest mt-6 uppercase">Daughter of</p>
+                <p class="text-sm md:text-base font-semibold text-white/90 mt-1">Priya Family</p>
+                <div class="w-16 h-[1.5px] bg-[#ab9546]/50 mx-auto mt-4 mb-6"></div>
+                <p class="font-subheading-display text-[#ab9546] text-xs tracking-[0.25em] uppercase font-semibold">On the following auspicious ceremonies</p>
+            </div>
+
+            <!-- 6 Events Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8 justify-items-center">
+                <!-- Event Card 1 (Phaldan / Tilak Ceremony) -->
+                <div class="flex flex-col items-center max-w-[280px] w-full group reveal-element">
+                    <div class="relative w-[180px] h-[260px]">
+                        <div class="w-full h-full overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-[1.03]" style="border-radius: 300px; isolation: isolate;">
+                            <img src="resources/event_phaldan.jpg" alt="Phaldan Ceremony Illustration" class="w-full h-full object-cover">
+                            <img src="resources/event_decoration_frame.png" alt="Gold Frame" class="absolute inset-0 w-full h-full object-fill pointer-events-none z-10">
+                        </div>
+                        <img src="resources/floating_balloon.png" alt="Balloon Decor" class="absolute -left-6 -top-5 w-[65px] object-contain pointer-events-none z-20 group-hover:translate-y-[-5px] transition-transform duration-1000">
+                        <img src="resources/floating_moon.png" alt="Moon Decor" class="absolute -right-6 top-[45%] w-[45px] object-contain pointer-events-none z-20 transform rotate-[-7deg]">
+                        <img src="resources/floating_palace.png" alt="Palace Decor" class="absolute -left-6 bottom-[-5px] w-[75px] object-contain pointer-events-none z-20 transform rotate-[-9deg]">
+                    </div>
+                    <div class="mt-6 text-center text-heritage-cream">
+                        <h3 class="font-subheading-display text-2xl text-antique-gold mb-2 font-bold tracking-wide">Phaldan &amp; Tilak</h3>
+                        <p class="font-body-sm text-xs text-antique-gold/90 uppercase tracking-widest mb-1">Monday, 16 November 2026</p>
+                        <p class="font-body-sm text-xs text-antique-gold/90 uppercase tracking-widest mb-1">Central School, Indira Nagar, Patna-1</p>
+                        <p class="font-body-sm text-xs text-antique-gold/90 uppercase tracking-widest mb-4">Tilak Ceremony &amp; Feast</p>
+                        <a href="https://maps.google.com/?q=Central+School+Indira+Nagar+Patel+Park+Patna" target="_blank" class="font-label-ui text-xs text-antique-gold uppercase tracking-[0.2em] font-bold border-b border-antique-gold pb-0.5 hover:text-white hover:border-white transition-all">See the route</a>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 (Mandap & Bans Ropan) -->
+                <div class="flex flex-col items-center max-w-[280px] w-full group reveal-element">
+                    <div class="relative w-[180px] h-[260px]">
+                        <div class="w-full h-full overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-[1.03]" style="border-radius: 300px; isolation: isolate;">
+                            <img src="resources/event_mandap.jpg" alt="Mandap &amp; Bans Ropan Illustration" class="w-full h-full object-cover">
+                            <img src="resources/event_decoration_frame.png" alt="Gold Frame" class="absolute inset-0 w-full h-full object-fill pointer-events-none z-10">
+                        </div>
+                        <img src="resources/floating_balloon.png" alt="Balloon Decor" class="absolute -left-6 -top-5 w-[65px] object-contain pointer-events-none z-20 group-hover:translate-y-[-5px] transition-transform duration-1000">
+                        <img src="resources/floating_moon.png" alt="Moon Decor" class="absolute -right-6 top-[45%] w-[45px] object-contain pointer-events-none z-20 transform rotate-[-7deg]">
+                        <img src="resources/floating_palace.png" alt="Palace Decor" class="absolute -left-6 bottom-[-5px] w-[75px] object-contain pointer-events-none z-20 transform rotate-[-9deg]">
+                    </div>
+                    <div class="mt-6 text-center text-heritage-cream">
+                        <h3 class="font-subheading-display text-2xl text-antique-gold mb-2 font-bold tracking-wide">Mandap &amp; Bans Ropan</h3>
+                        <p class="font-body-sm text-xs text-antique-gold/90 uppercase tracking-widest mb-1">Wednesday, 18 November 2026</p>
+                        <p class="font-body-sm text-xs text-antique-gold/90 uppercase tracking-widest mb-1">Family Residence, Ozhō, Nawada</p>
+                        <p class="font-body-sm text-xs text-antique-gold/90 uppercase tracking-widest mb-4">Mandap &amp; Deity Worship</p>
+                        <a href="https://maps.google.com/?q=Ozho+Hisua+Nawada+District+Bihar" target="_blank" class="font-label-ui text-xs text-antique-gold uppercase tracking-[0.2em] font-bold border-b border-antique-gold pb-0.5 hover:text-white hover:border-white transition-all">See the route</a>
+                    </div>
+                </div>
+
+                <!-- Event Card 3 (Haldi Kalash Ceremony) -->
+                <div class="flex flex-col items-center max-w-[280px] w-full group reveal-element">
+                    <div class="relative w-[180px] h-[260px]">
+                        <div class="w-full h-full overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-[1.03]" style="border-radius: 300px; isolation: isolate;">
+                            <img src="resources/event_haldi.jpg" alt="Haldi Kalash Ceremony Illustration" class="w-full h-full object-cover">
+                            <img src="resources/event_decoration_frame.png" alt="Gold Frame" class="absolute inset-0 w-full h-full object-fill pointer-events-none z-10">
+                        </div>
+                        <img src="resources/floating_balloon.png" alt="Balloon Decor" class="absolute -left-6 -top-5 w-[65px] object-contain pointer-events-none z-20 group-hover:translate-y-[-5px] transition-transform duration-1000">
+                        <img src="resources/floating_moon.png" alt="Moon Decor" class="absolute -right-6 top-[45%] w-[45px] object-contain pointer-events-none z-20 transform rotate-[-7deg]">
+                        <img src="resources/floating_palace.png" alt="Palace Decor" class="absolute -left-6 bottom-[-5px] w-[75px] object-contain pointer-events-none z-20 transform rotate-[-9deg]">
+                    </div>
+                    <div class="mt-6 text-center text-heritage-cream">
+                        <h3 class="font-subheading-display text-2xl text-antique-gold mb-2 font-bold tracking-wide">Haldi Kalash Ceremony</h3>
+                        <p class="font-body-sm text-xs text-antique-gold/90 uppercase tracking-widest mb-1">Wednesday, 18 November 2026</p>
+                        <p class="font-body-sm text-xs text-antique-gold/90 uppercase tracking-widest mb-1">Family Residence, Ozhō, Nawada</p>
+                        <p class="font-body-sm text-xs text-antique-gold/90 uppercase tracking-widest mb-4">Auspicious Ubtan &amp; Blessings</p>
+                        <a href="https://maps.google.com/?q=Ozho+Hisua+Nawada+District+Bihar" target="_blank" class="font-label-ui text-xs text-antique-gold uppercase tracking-[0.2em] font-bold border-b border-antique-gold pb-0.5 hover:text-white hover:border-white transition-all">See the route</a>
+                    </div>
+                </div>
+
+                <!-- Event Card 4 (Baraat Departure) -->
+                <div class="flex flex-col items-center max-w-[280px] w-full group reveal-element">
+                    <div class="relative w-[180px] h-[260px]">
+                        <div class="w-full h-full overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-[1.03]" style="border-radius: 300px; isolation: isolate;">
+                            <img src="resources/event_baraat.jpg" alt="Baraat Prasthan Illustration" class="w-full h-full object-cover">
+                            <img src="resources/event_decoration_frame.png" alt="Gold Frame" class="absolute inset-0 w-full h-full object-fill pointer-events-none z-10">
+                        </div>
+                        <img src="resources/floating_balloon.png" alt="Balloon Decor" class="absolute -left-6 -top-5 w-[65px] object-contain pointer-events-none z-20 group-hover:translate-y-[-5px] transition-transform duration-1000">
+                        <img src="resources/floating_moon.png" alt="Moon Decor" class="absolute -right-6 top-[45%] w-[45px] object-contain pointer-events-none z-20 transform rotate-[-7deg]">
+                        <img src="resources/floating_palace.png" alt="Palace Decor" class="absolute -left-6 bottom-[-5px] w-[75px] object-contain pointer-events-none z-20 transform rotate-[-9deg]">
+                    </div>
+                    <div class="mt-6 text-center text-heritage-cream">
+                        <h3 class="font-subheading-display text-2xl text-antique-gold mb-2 font-bold tracking-wide">Baraat Departure</h3>
+                        <p class="font-body-sm text-xs text-antique-gold/90 uppercase tracking-widest mb-1">Friday, 20 November 2026</p>
+                        <p class="font-body-sm text-xs text-antique-gold/90 uppercase tracking-widest mb-1">Towards Raj Darbar Banquet, Patna</p>
+                        <p class="font-body-sm text-xs text-antique-gold/90 uppercase tracking-widest mb-4">Wedding Procession</p>
+                        <a href="https://maps.google.com/?q=Raj+Darbar+Banquet+Hall+Jagdeo+Path+Bailey+Road+Patna+Bihar" target="_blank" class="font-label-ui text-xs text-antique-gold uppercase tracking-[0.2em] font-bold border-b border-antique-gold pb-0.5 hover:text-white hover:border-white transition-all">See the route</a>
+                    </div>
+                </div>
+
+                <!-- Event Card 5 (Shubh Vivah) -->
+                <div class="flex flex-col items-center max-w-[280px] w-full group reveal-element">
+                    <div class="relative w-[180px] h-[260px]">
+                        <div class="w-full h-full overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-[1.03]" style="border-radius: 300px; isolation: isolate;">
+                            <img src="resources/event_vivah.jpg" alt="Shubh Vivah Illustration" class="w-full h-full object-cover">
+                            <img src="resources/event_decoration_frame.png" alt="Gold Frame" class="absolute inset-0 w-full h-full object-fill pointer-events-none z-10">
+                        </div>
+                        <img src="resources/floating_balloon.png" alt="Balloon Decor" class="absolute -left-6 -top-5 w-[65px] object-contain pointer-events-none z-20 group-hover:translate-y-[-5px] transition-transform duration-1000">
+                        <img src="resources/floating_moon.png" alt="Moon Decor" class="absolute -right-6 top-[45%] w-[45px] object-contain pointer-events-none z-20 transform rotate-[-7deg]">
+                        <img src="resources/floating_palace.png" alt="Palace Decor" class="absolute -left-6 bottom-[-5px] w-[75px] object-contain pointer-events-none z-20 transform rotate-[-9deg]">
+                    </div>
+                    <div class="mt-6 text-center text-heritage-cream">
+                        <h3 class="font-subheading-display text-2xl text-antique-gold mb-2 font-bold tracking-wide">Shubh Vivah</h3>
+                        <p class="font-body-sm text-xs text-antique-gold/90 uppercase tracking-widest mb-1">Friday, 20 November 2026</p>
+                        <p class="font-body-sm text-xs text-antique-gold/90 uppercase tracking-widest mb-1">Raj Darbar Banquet Hall, Patna</p>
+                        <p class="font-body-sm text-xs text-antique-gold/90 uppercase tracking-widest mb-4">Wedding Ceremony at Night</p>
+                        <a href="https://maps.google.com/?q=Raj+Darbar+Banquet+Hall+Jagdeo+Path+Bailey+Road+Patna+Bihar" target="_blank" class="font-label-ui text-xs text-antique-gold uppercase tracking-[0.2em] font-bold border-b border-antique-gold pb-0.5 hover:text-white hover:border-white transition-all">See the route</a>
+                    </div>
+                </div>
+
+                <!-- Event Card 6 (Reception) -->
+                <div class="flex flex-col items-center max-w-[280px] w-full group reveal-element">
+                    <div class="relative w-[180px] h-[260px]">
+                        <div class="w-full h-full overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-[1.03]" style="border-radius: 300px; isolation: isolate;">
+                            <img src="resources/event_reception.jpg" alt="Reception Ceremony Illustration" class="w-full h-full object-cover">
+                            <img src="resources/event_decoration_frame.png" alt="Gold Frame" class="absolute inset-0 w-full h-full object-fill pointer-events-none z-10">
+                        </div>
+                        <img src="resources/floating_balloon.png" alt="Balloon Decor" class="absolute -left-6 -top-5 w-[65px] object-contain pointer-events-none z-20 group-hover:translate-y-[-5px] transition-transform duration-1000">
+                        <img src="resources/floating_moon.png" alt="Moon Decor" class="absolute -right-6 top-[45%] w-[45px] object-contain pointer-events-none z-20 transform rotate-[-7deg]">
+                        <img src="resources/floating_palace.png" alt="Palace Decor" class="absolute -left-6 bottom-[-5px] w-[75px] object-contain pointer-events-none z-20 transform rotate-[-9deg]">
+                    </div>
+                    <div class="mt-6 text-center text-heritage-cream">
+                        <h3 class="font-subheading-display text-2xl text-antique-gold mb-2 font-bold tracking-wide">Grand Reception</h3>
+                        <p class="font-body-sm text-xs text-antique-gold/90 uppercase tracking-widest mb-1">Monday, 23 November 2026</p>
+                        <p class="font-body-sm text-xs text-antique-gold/90 uppercase tracking-widest mb-1">Raj Darbar Banquet Hall, Patna</p>
+                        <p class="font-body-sm text-xs text-antique-gold/90 uppercase tracking-widest mb-4">From 7:00 PM Onwards • Feast</p>
+                        <a href="https://maps.google.com/?q=Raj+Darbar+Banquet+Hall+Jagdeo+Path+Bailey+Road+Patna+Bihar" target="_blank" class="font-label-ui text-xs text-antique-gold uppercase tracking-[0.2em] font-bold border-b border-antique-gold pb-0.5 hover:text-white hover:border-white transition-all">See the route</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 6: Detailed Event Schedule Itinerary -->
+    <section class="py-section-padding-v bg-surface-container-low" id="itinerary">
+        <div class="max-w-4xl mx-auto px-section-padding-h">
+            <div class="text-center mb-16 reveal-element">
+                <h2 class="font-headline-lg text-3xl md:text-5xl text-royal-maroon font-bold">Event Itinerary</h2>
+                <p class="font-subheading-display text-antique-gold tracking-[0.2em] mt-2 font-semibold">NOVEMBER 2026 CEREMONY SCHEDULE</p>
+                <div class="w-16 h-px bg-antique-gold mx-auto mt-4"></div>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- Day 1: 16 Nov -->
+                <div class="flex items-start gap-4 md:gap-6 p-4 md:p-6 border-b border-outline-variant/30 group hover:bg-white/60 rounded-xl transition-all duration-300 reveal-element">
+                    <div class="font-headline-lg text-3xl md:text-4xl text-antique-gold opacity-80 font-bold w-12 text-center">16</div>
+                    <div class="flex-1">
+                        <p class="font-label-ui text-royal-maroon text-sm md:text-base mb-1 uppercase tracking-widest font-bold">Phaldan &amp; Auspicious Tilak Ceremony</p>
+                        <p class="font-body-sm text-sm text-on-surface-variant">Monday, 16 November 2026 • Phaldan (engagement / tilak ceremony), auspicious Tilak ceremony &amp; grand feast at Central School, Indira Nagar, Patel Park, Patna-1.</p>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <a href="https://maps.google.com/?q=Central+School+Indira+Nagar+Patel+Park+Patna" target="_blank" class="inline-flex items-center text-[10px] bg-royal-maroon/10 text-royal-maroon px-3 py-1.5 rounded-full font-bold tracking-widest uppercase hover:bg-royal-maroon hover:text-heritage-cream transition-all duration-300">
+                                <span>View Location Map</span> <span class="material-symbols-outlined text-xs ml-1">map</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Day 2: 18 Nov -->
+                <div class="flex items-start gap-4 md:gap-6 p-4 md:p-6 border-b border-outline-variant/30 group hover:bg-white/60 rounded-xl transition-all duration-300 reveal-element">
+                    <div class="font-headline-lg text-3xl md:text-4xl text-antique-gold opacity-80 font-bold w-12 text-center">18</div>
+                    <div class="flex-1">
+                        <p class="font-label-ui text-royal-maroon text-sm md:text-base mb-1 uppercase tracking-widest font-bold">Mandap Preparation, Bans Ropan &amp; Haldi Kalash</p>
+                        <p class="font-body-sm text-sm text-on-surface-variant">Wednesday, 18 November 2026 • Mandap preparation, Haldi Kalash ceremony, Bans Ropan ritual and family deity worship at Family residence, Ozhō, Hisua Police Station, Nawada District, Bihar.</p>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <a href="https://maps.google.com/?q=Ozho+Hisua+Nawada+District+Bihar" target="_blank" class="inline-flex items-center text-[10px] bg-royal-maroon/10 text-royal-maroon px-3 py-1.5 rounded-full font-bold tracking-widest uppercase hover:bg-royal-maroon hover:text-heritage-cream transition-all duration-300">
+                                <span>View Location Map</span> <span class="material-symbols-outlined text-xs ml-1">map</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Day 3: 20 Nov -->
+                <div class="flex items-start gap-4 md:gap-6 p-4 md:p-6 border-b border-outline-variant/30 group hover:bg-white/60 rounded-xl transition-all duration-300 reveal-element">
+                    <div class="font-headline-lg text-3xl md:text-4xl text-antique-gold opacity-80 font-bold w-12 text-center">20</div>
+                    <div class="flex-1">
+                        <p class="font-label-ui text-royal-maroon text-sm md:text-base mb-1 uppercase tracking-widest font-bold">Baraat Departure &amp; Sacred Wedding Ceremony (Night)</p>
+                        <p class="font-body-sm text-sm text-on-surface-variant">Friday, 20 November 2026 • Departure of the wedding procession (Baraat) and auspicious wedding ceremony at night at Raj Darbar Banquet Hall, Jagdeo Path, Bailey Road, Patna, Bihar.</p>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <a href="https://maps.google.com/?q=Raj+Darbar+Banquet+Hall+Jagdeo+Path+Bailey+Road+Patna+Bihar" target="_blank" class="inline-flex items-center text-[10px] bg-royal-maroon/10 text-royal-maroon px-3 py-1.5 rounded-full font-bold tracking-widest uppercase hover:bg-royal-maroon hover:text-heritage-cream transition-all duration-300">
+                                <span>View Location Map</span> <span class="material-symbols-outlined text-xs ml-1">map</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 4: 23 Nov -->
+                <div class="flex items-start gap-4 md:gap-6 p-4 md:p-6 group hover:bg-white/60 rounded-xl transition-all duration-300 reveal-element">
+                    <div class="font-headline-lg text-3xl md:text-4xl text-antique-gold opacity-80 font-bold w-12 text-center">23</div>
+                    <div class="flex-1">
+                        <p class="font-label-ui text-royal-maroon text-sm md:text-base mb-1 uppercase tracking-widest font-bold">Bride &amp; Groom Reception Ceremony &amp; Feast</p>
+                        <p class="font-body-sm text-sm text-on-surface-variant">Monday, 23 November 2026 • From 7:00 PM onwards. Bride and groom reception ceremony &amp; grand feast at Raj Darbar Banquet Hall, Jagdeo Path, Bailey Road, Patna, Bihar.</p>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <a href="https://maps.google.com/?q=Raj+Darbar+Banquet+Hall+Jagdeo+Path+Bailey+Road+Patna+Bihar" target="_blank" class="inline-flex items-center text-[10px] bg-royal-maroon/10 text-royal-maroon px-3 py-1.5 rounded-full font-bold tracking-widest uppercase hover:bg-royal-maroon hover:text-heritage-cream transition-all duration-300">
+                                <span>View Location Map</span> <span class="material-symbols-outlined text-xs ml-1">map</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 7: Pre-Wedding Memories Photo Gallery -->
+    <section class="py-section-padding-v max-w-container-max mx-auto px-section-padding-h" id="gallery">
+        <div class="text-center mb-16 reveal-element">
+            <h2 class="font-headline-lg text-3xl md:text-5xl text-royal-maroon font-bold">Beautiful Moments</h2>
+            <p class="font-subheading-display text-antique-gold tracking-widest mt-2 font-semibold">GLIMPSES OF OUR PRECIOUS BOND</p>
+            <div class="w-16 h-px bg-antique-gold mx-auto mt-4"></div>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal-element">
+            <!-- Photo 1 -->
+            <div class="group relative aspect-square overflow-hidden rounded-2xl border-2 border-antique-gold/20 shadow-md">
+                <img alt="Priyavrat &amp; Ayushi Wedding" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="4.png"/>
+                <div class="absolute inset-0 bg-royal-maroon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="material-symbols-outlined text-heritage-cream text-3xl">zoom_in</span>
+                </div>
+            </div>
+            <!-- Photo 2 -->
+            <div class="group relative aspect-square overflow-hidden rounded-2xl border-2 border-antique-gold/20 shadow-md">
+                <img alt="Moments of Joy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="1.jpeg"/>
+                <div class="absolute inset-0 bg-royal-maroon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="material-symbols-outlined text-heritage-cream text-3xl">zoom_in</span>
+                </div>
+            </div>
+            <!-- Photo 3 -->
+            <div class="group relative aspect-square overflow-hidden rounded-2xl border-2 border-antique-gold/20 shadow-md">
+                <img alt="Radiant Bride Ayushi" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="2.jpeg"/>
+                <div class="absolute inset-0 bg-royal-maroon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="material-symbols-outlined text-heritage-cream text-3xl">zoom_in</span>
+                </div>
+            </div>
+            <!-- Photo 4 -->
+            <div class="group relative aspect-square overflow-hidden rounded-2xl border-2 border-antique-gold/20 shadow-md">
+                <img alt="Priyavrat &amp; Ayushi" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="3.jpeg"/>
+                <div class="absolute inset-0 bg-royal-maroon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="material-symbols-outlined text-heritage-cream text-3xl">zoom_in</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 8: Venue & Celebrations Guide -->
+    <section class="py-section-padding-v max-w-container-max mx-auto px-section-padding-h" id="venue-section">
+        <div class="bg-[#3B4E3E] rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-2xl reveal-element border border-antique-gold/30">
+            <div class="flex-1 p-10 md:p-14 text-heritage-cream flex flex-col justify-center border-b md:border-b-0 md:border-r border-antique-gold/20">
+                <span class="font-subheading-display text-antique-gold tracking-widest text-xs uppercase mb-2 font-bold">The Royal Setting</span>
+                <h2 class="font-headline-lg text-3xl md:text-5xl text-antique-gold mb-6 font-bold">Raj Darbar Banquet Hall</h2>
+                <p class="font-body-lg mb-8 opacity-90 text-base md:text-lg leading-relaxed">Experience royal warmth and celebration in Patna. The wedding ceremony and grand reception will be hosted at the prestigious Raj Darbar Banquet Hall.</p>
+                <div class="space-y-4 border-t border-antique-gold/10 pt-6">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-antique-gold text-2xl">location_on</span>
+                        <span class="font-label-ui text-xs md:text-sm tracking-wide uppercase">JAGDEO PATH, BAILEY ROAD, PATNA, BIHAR - 800014</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-antique-gold text-2xl">call</span>
+                        <span class="font-label-ui text-xs md:text-sm tracking-wide">+91 82101 03722 / +91 93866 37919</span>
+                    </div>
+                </div>
+                <!-- Directions Trigger -->
+                <a target="_blank" class="mt-8 inline-block bg-antique-gold text-royal-maroon px-8 py-3.5 rounded-full font-label-ui uppercase tracking-widest shimmer-btn text-center text-sm font-bold shadow-md transition-transform duration-300 hover:scale-[1.02]" href="https://maps.google.com/?q=Raj+Darbar+Banquet+Hall+Jagdeo+Path+Bailey+Road+Patna+Bihar">GET DIRECTIONS ON MAP</a>
+            </div>
+            <div class="flex-1 min-h-[350px] relative">
+                <!-- Venue Image Overlay details -->
+                <div class="absolute inset-0 contrast-125 opacity-35 bg-cover bg-center" style="background-image: url('4.png')"></div>
+                <!-- Subtle graphic overlay card -->
+                <div class="absolute inset-0 flex items-center justify-center p-8 bg-gradient-to-t from-black/70 to-transparent">
+                    <div class="border border-antique-gold/40 backdrop-blur-md p-6 rounded-2xl max-w-sm text-center text-heritage-cream bg-black/30 shadow-xl">
+                        <span class="material-symbols-outlined text-antique-gold text-4xl mb-2">celebration</span>
+                        <h4 class="font-headline-lg text-lg text-antique-gold mb-1 font-bold">Auspicious Celebrations</h4>
+                        <p class="font-body-sm text-xs opacity-90 leading-relaxed">We eagerly look forward to your gracious presence and heartfelt blessings to commemorate this sacred milestone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 8b: Important Contact Numbers Section -->
+    <section class="py-section-padding-v max-w-container-max mx-auto px-section-padding-h" id="contacts">
+        <div class="text-center mb-12 reveal-element">
+            <h2 class="font-headline-lg text-3xl md:text-5xl text-royal-maroon font-bold">Important Contacts</h2>
+            <p class="font-subheading-display text-antique-gold tracking-widest mt-2 font-semibold uppercase">FAMILY COORDINATORS &amp; GUEST ASSISTANCE</p>
+            <div class="w-16 h-px bg-antique-gold mx-auto mt-4"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal-element">
+            <!-- Contact 1: Mr. Chhote Lal Sharma -->
+            <div class="bg-white/70 border border-antique-gold/30 rounded-2xl p-6 text-center shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+                <div>
+                    <div class="w-14 h-14 bg-royal-maroon/10 text-royal-maroon rounded-full flex items-center justify-center mx-auto mb-4 border border-antique-gold/40 group-hover:bg-royal-maroon group-hover:text-antique-gold transition-colors">
+                        <span class="material-symbols-outlined text-2xl">person</span>
+                    </div>
+                    <h4 class="font-headline-lg text-lg md:text-xl text-royal-maroon mb-1 font-bold">Mr. Chhote Lal Sharma</h4>
+                    <p class="font-subheading-display text-xs text-antique-gold font-bold uppercase tracking-wider mb-4">Groom's Family</p>
+                </div>
+                <a href="tel:8210103722" class="inline-flex items-center justify-center gap-2 bg-royal-maroon text-antique-gold py-2.5 px-4 rounded-full font-label-ui text-sm font-bold tracking-wider hover:bg-antique-gold hover:text-royal-maroon transition-all shadow-sm">
+                    <span class="material-symbols-outlined text-sm">call</span> 82101 03722
+                </a>
+            </div>
+
+            <!-- Contact 2: Prof. Shashi Bhushan Sharma -->
+            <div class="bg-white/70 border border-antique-gold/30 rounded-2xl p-6 text-center shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+                <div>
+                    <div class="w-14 h-14 bg-royal-maroon/10 text-royal-maroon rounded-full flex items-center justify-center mx-auto mb-4 border border-antique-gold/40 group-hover:bg-royal-maroon group-hover:text-antique-gold transition-colors">
+                        <span class="material-symbols-outlined text-2xl">school</span>
+                    </div>
+                    <h4 class="font-headline-lg text-lg md:text-xl text-royal-maroon mb-1 font-bold">Prof. Shashi Bhushan Sharma</h4>
+                    <p class="font-subheading-display text-xs text-antique-gold font-bold uppercase tracking-wider mb-4">Coordinator</p>
+                </div>
+                <a href="tel:9386637919" class="inline-flex items-center justify-center gap-2 bg-royal-maroon text-antique-gold py-2.5 px-4 rounded-full font-label-ui text-sm font-bold tracking-wider hover:bg-antique-gold hover:text-royal-maroon transition-all shadow-sm">
+                    <span class="material-symbols-outlined text-sm">call</span> 93866 37919
+                </a>
+            </div>
+
+            <!-- Contact 3: Mr. Shambhu Sharan Sharma -->
+            <div class="bg-white/70 border border-antique-gold/30 rounded-2xl p-6 text-center shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+                <div>
+                    <div class="w-14 h-14 bg-royal-maroon/10 text-royal-maroon rounded-full flex items-center justify-center mx-auto mb-4 border border-antique-gold/40 group-hover:bg-royal-maroon group-hover:text-antique-gold transition-colors">
+                        <span class="material-symbols-outlined text-2xl">supervisor_account</span>
+                    </div>
+                    <h4 class="font-headline-lg text-lg md:text-xl text-royal-maroon mb-1 font-bold">Mr. Shambhu Sharan Sharma</h4>
+                    <p class="font-subheading-display text-xs text-antique-gold font-bold uppercase tracking-wider mb-4">Coordinator</p>
+                </div>
+                <a href="tel:7091182405" class="inline-flex items-center justify-center gap-2 bg-royal-maroon text-antique-gold py-2.5 px-4 rounded-full font-label-ui text-sm font-bold tracking-wider hover:bg-antique-gold hover:text-royal-maroon transition-all shadow-sm">
+                    <span class="material-symbols-outlined text-sm">call</span> 70911 82405
+                </a>
+            </div>
+
+            <!-- Contact 4: Mr. Kashinath Singh -->
+            <div class="bg-white/70 border border-antique-gold/30 rounded-2xl p-6 text-center shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+                <div>
+                    <div class="w-14 h-14 bg-royal-maroon/10 text-royal-maroon rounded-full flex items-center justify-center mx-auto mb-4 border border-antique-gold/40 group-hover:bg-royal-maroon group-hover:text-antique-gold transition-colors">
+                        <span class="material-symbols-outlined text-2xl">support_agent</span>
+                    </div>
+                    <h4 class="font-headline-lg text-lg md:text-xl text-royal-maroon mb-1 font-bold">Mr. Kashinath Singh</h4>
+                    <p class="font-subheading-display text-xs text-antique-gold font-bold uppercase tracking-wider mb-4">Hospitality</p>
+                </div>
+                <a href="tel:6203744454" class="inline-flex items-center justify-center gap-2 bg-royal-maroon text-antique-gold py-2.5 px-4 rounded-full font-label-ui text-sm font-bold tracking-wider hover:bg-antique-gold hover:text-royal-maroon transition-all shadow-sm">
+                    <span class="material-symbols-outlined text-sm">call</span> 62037 44454
+                </a>
+            </div>
+        </div>
+        
+        <!-- Additional Helpline Strip -->
+        <div class="mt-8 p-6 bg-white/50 border border-antique-gold/30 rounded-2xl text-center reveal-element max-w-3xl mx-auto shadow-sm">
+            <p class="font-subheading-display text-xs md:text-sm tracking-widest text-royal-maroon uppercase font-bold mb-3">Additional Family Helpline Numbers</p>
+            <div class="flex flex-wrap justify-center gap-3 md:gap-4 text-xs md:text-sm font-label-ui font-bold text-royal-maroon">
+                <a href="tel:7004692695" class="hover:text-antique-gold transition-colors inline-flex items-center gap-1.5 bg-white px-4 py-2 rounded-full border border-antique-gold/30 shadow-sm"><span class="material-symbols-outlined text-sm text-antique-gold">call</span> 70046 92695</a>
+                <a href="tel:8935910902" class="hover:text-antique-gold transition-colors inline-flex items-center gap-1.5 bg-white px-4 py-2 rounded-full border border-antique-gold/30 shadow-sm"><span class="material-symbols-outlined text-sm text-antique-gold">call</span> 89359 10902</a>
+                <a href="tel:9608142797" class="hover:text-antique-gold transition-colors inline-flex items-center gap-1.5 bg-white px-4 py-2 rounded-full border border-antique-gold/30 shadow-sm"><span class="material-symbols-outlined text-sm text-antique-gold">call</span> 96081 42797</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 9: RSVP -->
+    <section class="py-section-padding-v text-center relative overflow-hidden" id="rsvp">
+        <!-- Mandala Rotating Background -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] md:w-[900px] h-[700px] md:h-[900px] opacity-[0.03] pointer-events-none">
+            <img alt="Background Mandala" class="w-full h-full animate-[spin_80s_linear_infinite]" src="resources/mandala.png"/>
+        </div>
+        
+        <div class="relative z-10 max-w-2xl mx-auto px-6">
+            <img alt="Peacock Feather" class="w-16 h-16 mx-auto mb-6 hover:rotate-12 transition-transform duration-500" src="resources/peacock_feather.png"/>
+            <h2 class="font-headline-lg text-3xl md:text-5xl text-royal-maroon mb-3 reveal-element">Will You Join Us?</h2>
+            <p class="font-body-lg text-on-surface-variant mb-12 reveal-element">Your presence will add a blossom of joy to our celebration. Kindly confirm your attendance by November 10th, 2026.</p>
+            
+            <div class="flex flex-col gap-6 text-left bg-white/40 border border-antique-gold/20 p-8 rounded-2xl shadow-md reveal-element" id="rsvp-card-content">
+                <div class="flex flex-col">
+                    <label class="text-xs uppercase tracking-wider font-label-ui text-royal-maroon mb-2" for="rsvp-name">Full Name</label>
+                    <input class="bg-transparent border-b-2 border-royal-maroon/20 focus:border-royal-maroon focus:ring-0 py-3 px-2 font-subheading-display text-xl outline-none transition-all" id="rsvp-name" placeholder="Your Name" type="text"/>
+                </div>
+
+                <div class="flex flex-col">
+                    <label class="text-xs uppercase tracking-wider font-label-ui text-royal-maroon mb-2" for="rsvp-guests">Number of Guests</label>
+                    <select class="bg-transparent border-b-2 border-royal-maroon/20 focus:border-royal-maroon focus:ring-0 py-3 px-2 font-subheading-display text-xl outline-none transition-all" id="rsvp-guests">
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="5+">5+ Guests</option>
+                    </select>
+                </div>
+                
+                <div class="flex flex-col">
+                    <label class="text-xs uppercase tracking-wider font-label-ui text-royal-maroon mb-2">Attendance Confirmation</label>
+                    <div class="flex flex-wrap gap-6 mt-2">
+                        <label class="flex items-center gap-2 cursor-pointer group">
+                            <input checked class="w-4 h-4 text-royal-maroon focus:ring-royal-maroon border-antique-gold/40" name="rsvp-option" type="radio" value="Accept with Pleasure"/>
+                            <span class="font-label-ui text-sm uppercase tracking-widest group-hover:text-royal-maroon transition-colors">Accept with Pleasure</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer group">
+                            <input class="w-4 h-4 text-royal-maroon focus:ring-royal-maroon border-antique-gold/40" name="rsvp-option" type="radio" value="Regretfully Decline"/>
+                            <span class="font-label-ui text-sm uppercase tracking-widest group-hover:text-royal-maroon transition-colors">Regretfully Decline</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <button onclick="handleRSVPSubmit()" class="bg-royal-maroon text-antique-gold px-12 py-4 rounded-full font-label-ui text-base tracking-widest uppercase mt-4 shimmer-btn flex items-center justify-center gap-3 mx-auto w-full font-bold shadow-md transition-transform duration-300 active:scale-95">
+                    <span>Confirm RSVP</span>
+                    <span class="material-symbols-outlined">check_circle</span>
+                </button>
+            </div>
+
+            <!-- Success message card, initially hidden -->
+            <div class="hidden flex-col items-center justify-center text-center bg-white/40 border border-antique-gold/20 p-8 rounded-2xl shadow-md reveal-element" id="rsvp-success-message">
+                <span class="material-symbols-outlined text-antique-gold text-5xl mb-4 animate-bounce">check_circle</span>
+                <h3 class="font-headline-lg text-2xl text-royal-maroon mb-2">RSVP Confirmed</h3>
+                <p class="font-body-lg text-on-surface-variant mb-2" id="rsvp-thank-you-text">Thank you! Your response has been recorded.</p>
+                <p class="font-subheading-display text-sm text-antique-gold tracking-widest uppercase">We look forward to celebrating with you!</p>
+            </div>
+
+            </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#2a0000] text-antique-gold py-16 px-section-padding-h border-t border-antique-gold/25 relative z-20">
+    <div class="max-w-container-max mx-auto flex flex-col items-center gap-unit text-center">
+        <img alt="Royal Union Logo" class="w-14 h-14 object-contain mb-3 rounded-lg shadow-lg border border-antique-gold/40" src="icon.webp"/>
+        <span class="font-display-lg text-2xl text-antique-gold tracking-[0.2em] mb-2 uppercase font-bold">The Royal Union</span>
+        <p class="font-subheading-display text-sm text-antique-gold/90 tracking-widest mb-4">Priyavrat Sharma &amp; Ayushi Raj Priya</p>
+        <div class="flex flex-wrap justify-center gap-6 mb-8 text-xs font-subheading-display tracking-widest">
+            <a class="text-antique-gold/80 hover:text-heritage-cream transition-colors" href="#hero">Home</a>
+            <a class="text-antique-gold/80 hover:text-heritage-cream transition-colors" href="#ceremonies">Ceremonies</a>
+            <a class="text-antique-gold/80 hover:text-heritage-cream transition-colors" href="#itinerary">Itinerary</a>
+            <a class="text-antique-gold/80 hover:text-heritage-cream transition-colors" href="#contacts">Contacts</a>
+            <a class="text-antique-gold/80 hover:text-heritage-cream transition-colors" href="#rsvp">RSVP</a>
+        </div>
+        <p class="font-body-sm text-xs text-antique-gold/60">© 2026 Priyavrat &amp; Ayushi Wedding Celebrations. Crafted with Love &amp; Devotion.</p>
+    </div>
+</footer>
+
+<!-- Floating Music Player Controls (Vinyl Disk record, bottom-left) -->
+<div class="fixed bottom-6 left-6 z-[60] hidden" id="floating-music-toggle">
+    <!-- Vinyl record spinner button -->
+    <button onclick="toggleMusic()" class="w-14 h-14 bg-[#1b1c17] border-2 border-antique-gold rounded-full flex items-center justify-center shadow-lg focus:outline-none relative group transition-transform duration-300 active:scale-95" id="music-btn" style="background-image: radial-gradient(circle, #333 10%, #111 11%, #111 30%, #222 31%, #222 50%, #111 51%, #111 70%, #333 71%);">
+        <!-- Center label of vinyl -->
+        <div class="absolute w-5 h-5 bg-antique-gold rounded-full flex items-center justify-center">
+            <span class="material-symbols-outlined text-[10px] text-royal-maroon font-bold animate-pulse" id="music-icon" style="font-variation-settings: 'FILL' 1;">music_note</span>
+        </div>
+        <!-- Sound waves or ON badge -->
+        <div class="absolute -top-1 -right-1 w-4 h-4 bg-antique-gold text-royal-maroon text-[8px] font-bold rounded-full flex items-center justify-center border border-heritage-cream shadow-sm animate-bounce" id="music-badge">ON</div>
+    </button>
+</div>
+
+<!-- Scripts section for music shehnai synthesizer, envelope opening sequences, drifting particles and dynamic lists -->
+<script>
+    // Initially block scroll until the overlay envelope opens
+    document.body.classList.add('overflow-hidden');
+
+    // ----------------------------------------------------
+    // 1. WEB AUDIO API - Romantic Wedding Flute Synthesizer
+    // ----------------------------------------------------
+    class WeddingFluteSynth {
+        constructor() {
+            this.ctx = null;
+            this.isPlaying = false;
+            this.notes = [
+                { note: "G4", duration: 1.0 },
+                { note: "A4", duration: 0.8 },
+                { note: "B4", duration: 1.2 },
+                { note: "D5", duration: 1.4 },
+                { note: "B4", duration: 0.6 },
+                { note: "D5", duration: 1.0 },
+                { note: "E5", duration: 1.6 },
+                { note: "D5", duration: 1.0 },
+                { note: "B4", duration: 0.8 },
+                { note: "A4", duration: 1.2 },
+                { note: "G4", duration: 1.8 },
+                { note: "A4", duration: 0.8 },
+                { note: "B4", duration: 1.4 }
+            ];
+            this.freqs = {
+                "G4": 392.00, "A4": 440.00, "B4": 493.88, "D5": 587.33, "E5": 659.25, "G5": 783.99
+            };
+            this.currentIndex = 0;
+            this.timer = null;
+            this.delayNode = null;
+            this.feedbackGain = null;
+        }
+
+        init() {
+            if (this.ctx) return;
+            const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+            this.ctx = new AudioContextClass();
+            
+            // Warm atmospheric space delay effect
+            this.delayNode = this.ctx.createDelay(1.0);
+            this.feedbackGain = this.ctx.createGain();
+            
+            this.delayNode.delayTime.value = 0.45; // Delay echo timing
+            this.feedbackGain.gain.value = 0.35;  // Feedback intensity
+            
+            // Connect delay feedback loop
+            this.delayNode.connect(this.feedbackGain);
+            this.feedbackGain.connect(this.delayNode);
+            
+            // Output node
+            this.delayNode.connect(this.ctx.destination);
+        }
+
+        playNote(freq, duration) {
+            if (!this.ctx || this.ctx.state === 'suspended') return;
+            
+            const osc = this.ctx.createOscillator();
+            const gain = this.ctx.createGain();
+            
+            // Flute simulation (sine wave + gentle warmth harmonics)
+            osc.type = 'sine';
+            osc.frequency.value = freq;
+            
+            // Soft pitch vibrato (shehnai quality)
+            const vibrato = this.ctx.createOscillator();
+            const vibratoGain = this.ctx.createGain();
+            vibrato.frequency.value = 6.0;  // 6Hz wobble
+            vibratoGain.gain.value = 3.5;    // depth
+            vibrato.connect(vibratoGain);
+            vibratoGain.connect(osc.frequency);
+            
+            // Amplitude Envelope
+            const now = this.ctx.currentTime;
+            gain.gain.setValueAtTime(0, now);
+            gain.gain.linearRampToValueAtTime(0.12, now + 0.18); // Soft attack
+            gain.gain.setValueAtTime(0.12, now + duration - 0.25);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + duration); // Soft fade
+            
+            osc.connect(gain);
+            gain.connect(this.ctx.destination);
+            gain.connect(this.delayNode); // Send to delay channel
+            
+            vibrato.start();
+            osc.start();
+            osc.stop(now + duration);
+        }
+
+        nextNote() {
+            if (!this.isPlaying) return;
+            const current = this.notes[this.currentIndex];
+            const freq = this.freqs[current.note];
+            const duration = current.duration * 0.85;
+            
+            this.playNote(freq, duration);
+            
+            this.currentIndex = (this.currentIndex + 1) % this.notes.length;
+            // Schedule next note (tempo scaling)
+            this.timer = setTimeout(() => this.nextNote(), current.duration * 1350);
+        }
+
+        start() {
+            this.init();
+            if (this.ctx.state === 'suspended') {
+                this.ctx.resume();
+            }
+            this.isPlaying = true;
+            this.nextNote();
+        }
+
+        stop() {
+            this.isPlaying = false;
+            if (this.timer) clearTimeout(this.timer);
+        }
+    }
+
+    const musicPlayer = new WeddingFluteSynth();
+
+    function toggleMusic() {
+        const musicBtn = document.getElementById('music-btn');
+        const badge = musicBtn.querySelector('div');
+        const icon = document.getElementById('music-icon');
+        
+        if (musicPlayer.isPlaying) {
+            musicPlayer.stop();
+            badge.innerText = "OFF";
+            badge.className = "absolute -top-1 -right-1 w-4 h-4 bg-red-600 text-white-[9px] font-bold rounded-full flex items-center justify-center border border-heritage-cream text-[9px]";
+            icon.classList.remove('animate-pulse');
+            musicBtn.classList.remove('animate-[spin_4s_linear_infinite]');
+        } else {
+            musicPlayer.start();
+            badge.innerText = "ON";
+            badge.className = "absolute -top-1 -right-1 w-4 h-4 bg-antique-gold text-royal-maroon text-[9px] font-bold rounded-full flex items-center justify-center border border-heritage-cream animate-bounce";
+            icon.classList.add('animate-pulse');
+            musicBtn.classList.add('animate-[spin_4s_linear_infinite]');
+        }
+    }
+
+    // ----------------------------------------------------
+    // 2. ENVELOPE OPENING ANIMATION SEQUENCE
+    // ----------------------------------------------------
+    let isEnvelopeOpened = false;
+    
+    function openInvitation() {
+        if (isEnvelopeOpened) return;
+        isEnvelopeOpened = true;
+        
+        const overlay = document.getElementById('opening-overlay');
+        const flap = document.getElementById('top-flap');
+        const seal = document.getElementById('wax-seal');
+        const card = document.getElementById('invitation-card');
+        
+        // Step 1: Crack/fade seal
+        if (seal) seal.classList.add('seal-crack');
+        
+        // Step 2: Open top flap of the envelope
+        setTimeout(() => {
+            if (flap) flap.style.transform = 'rotateX(180deg)';
+        }, 350);
+        
+        // Step 3: Slide the card upwards out of the folder
+        setTimeout(() => {
+            if (card) {
+                card.style.transform = 'translateY(-65%) scale(1.05)';
+                card.style.zIndex = '35';
+            }
+        }, 850);
+        
+        // Step 4: Fade the overlay envelope out and reveal the Welcome Cover page
+        setTimeout(() => {
+            if (overlay) {
+                overlay.style.opacity = '0';
+                overlay.style.pointerEvents = 'none';
+            }
+            setTimeout(() => {
+                if (overlay) overlay.classList.add('hidden');
+                const nav = document.getElementById('main-nav');
+                const musicToggle = document.getElementById('floating-music-toggle');
+                if (nav) nav.classList.remove('hidden');
+                if (musicToggle) musicToggle.classList.remove('hidden');
+                document.body.classList.remove('overflow-hidden');
+                checkReveal();
+                try {
+                    musicPlayer.start();
+                    const musicBtn = document.getElementById('music-btn');
+                    if (musicBtn) musicBtn.classList.add('animate-[spin_4s_linear_infinite]');
+                } catch (e) {
+                    console.log('Audio autoplay prevented or error:', e);
+                }
+            }, 800);
+        }, 2100);
+    }
+
+    function scrollToCouple() {
+        const coupleSec = document.getElementById('couple');
+        if (coupleSec) {
+            coupleSec.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // ----------------------------------------------------
+    // 3. DRIFTING PROPS ANIMATION (Leaves, Petals, Lanterns)
+    // ----------------------------------------------------
+    const propContainer = document.getElementById('prop-container');
+    const props = [
+        { src: "resources/lantern1.png", type: 'lantern' },
+        { src: "resources/lantern2.png", type: 'lantern' },
+        { src: "resources/glowing_lantern.png", type: 'lantern' },
+        { src: "resources/lantern1.png", type: 'lantern' },
+        { src: "resources/lantern2.png", type: 'lantern' },
+        { src: "resources/rose_petal.png", type: 'rose' }, 
+        { src: "resources/marigold_petal.png", type: 'marigold' }, 
+        { src: "resources/mango_leaf.png", type: 'leaf' }
+    ];
+    
+    function createProp() {
+        const propData = props[Math.floor(Math.random() * props.length)];
+        const propEl = document.createElement('img');
+        propEl.src = propData.src;
+        propEl.className = 'prop-drift';
+        
+        const startX = Math.random() * window.innerWidth;
+        
+        // Sizing props to make them delicate and elegant as requested
+        let widthPx = 28;
+        if (propData.type === 'leaf') {
+            widthPx = 22 + Math.random() * 16;
+        } else if (propData.type === 'rose' || propData.type === 'marigold') {
+            widthPx = 18 + Math.random() * 14;
+        } else if (propData.type === 'lantern') {
+            widthPx = 26 + Math.random() * 18;
+        }
+
+        const duration = 20 + Math.random() * 14;
+        const delay = Math.random() * 8;
+        const sway = 60 + Math.random() * 100;
+        
+        propEl.style.width = `${widthPx}px`;
+        propEl.style.height = 'auto';
+        propEl.style.left = `${startX}px`;
+        
+        let keyframes;
+        if (propData.type === 'lantern') {
+            // Lanterns float upwards with soft glow
+            propEl.style.bottom = `-80px`;
+            propEl.style.opacity = '0.35';
+            
+            keyframes = [
+                { transform: `translate(0, 0) rotate(0deg)`, opacity: 0 },
+                { opacity: 0.5, offset: 0.15 },
+                { opacity: 0.5, offset: 0.85 },
+                { transform: `translate(${Math.random() > 0.5 ? sway : -sway}px, -${window.innerHeight + 150}px) rotate(${Math.random() > 0.5 ? 15 : -15}deg)`, opacity: 0 }
+            ];
+        } else {
+            // Petals/leaves fall down gently
+            propEl.style.top = `-60px`;
+            propEl.style.opacity = '0.4';
+            
+            keyframes = [
+                { transform: `translate(0, 0) rotate(0deg)`, opacity: 0 },
+                { opacity: 0.65, offset: 0.1 },
+                { opacity: 0.65, offset: 0.9 },
+                { transform: `translate(${Math.random() > 0.5 ? sway : -sway}px, ${window.innerHeight + 150}px) rotate(${360 + Math.random() * 720}deg)`, opacity: 0 }
+            ];
+        }
+
+        propEl.animate(keyframes, {
+            duration: duration * 1000,
+            easing: 'linear',
+            delay: delay * 1000,
+            iterations: Infinity
+        });
+        
+        propContainer.appendChild(propEl);
+    }
+
+    // Initialize drift items
+    for (let i = 0; i < 35; i++) {
+        createProp();
+    }
+
+    // ----------------------------------------------------
+    // 4. INTERACTIVE SCROLL & ROTATING MAP WIDGET LOGIC
+    // ----------------------------------------------------
+    let lastScrollY = window.scrollY;
+    let targetRotation = 0;
+    let currentRotation = 0;
+    let isCenterpieceInView = false;
+    const easing = 0.05;        // Easing factor for natural friction decay
+    const autoRotationSpeed = 0.15; // Slow continuous rotation speed when not scrolling
+
+    // Initial check if centerpiece is in view on page load
+    const centerpieceSection = document.getElementById('centerpiece-section');
+    if (centerpieceSection) {
+        const rect = centerpieceSection.getBoundingClientRect();
+        isCenterpieceInView = (rect.top < window.innerHeight && rect.bottom > 0);
+    }
+
+    window.addEventListener('scroll', () => {
+        const scrollOffset = window.scrollY;
+        const delta = scrollOffset - lastScrollY;
+        lastScrollY = scrollOffset;
+
+        if (centerpieceSection) {
+            const rect = centerpieceSection.getBoundingClientRect();
+            const winHeight = window.innerHeight;
+            isCenterpieceInView = (rect.top < winHeight && rect.bottom > 0);
+            
+            if (isCenterpieceInView) {
+                // Scroll direction dictates rotation: positive delta is clockwise, negative delta is counter-clockwise
+                targetRotation += delta * 0.35;
+            }
+        }
+
+        // Parallax scroll-linked lanterns (sink down as we scroll down)
+        const parallaxLanterns = document.querySelectorAll('.parallax-lantern');
+        parallaxLanterns.forEach(lantern => {
+            const speed = parseFloat(lantern.dataset.speed || '0.5');
+            lantern.style.transform = `translateY(${scrollOffset * speed}px) rotate(${scrollOffset * 0.05}deg)`;
+        });
+        
+        // Trigger reveal checking on scroll
+        checkReveal();
+    });
+
+    // Animation loop for natural deceleration stopping
+    function animateRing() {
+        if (isCenterpieceInView) {
+            // Continuously increment targetRotation for the slow continuous movement
+            targetRotation += autoRotationSpeed;
+            
+            // Linear interpolation (lerp) for physics-based friction deceleration
+            currentRotation += (targetRotation - currentRotation) * easing;
+            
+            const ring = document.getElementById('rotating-map-ring');
+            if (ring) {
+                ring.style.transform = `rotate(${currentRotation}deg)`;
+            }
+        }
+        requestAnimationFrame(animateRing);
+    }
+    
+    // Start the animation loop
+    requestAnimationFrame(animateRing);
+
+    // ----------------------------------------------------
+    // 4b. BRIDE & GROOM CAROUSEL PORTRAIT SLIDER
+    // ----------------------------------------------------
+    let currentSlide = 0;
+    const totalSlides = 4;
+    let slideInterval = null;
+
+    const slideWrapper = document.getElementById('meet-slide-wrapper');
+    const swipeFrame = document.getElementById('swipe-frame');
+
+    function setSlide(index) {
+        currentSlide = index;
+        if (slideWrapper) {
+            slideWrapper.style.transition = 'transform 0.5s ease-in-out';
+            slideWrapper.style.transform = `translateX(-${currentSlide * 25}%)`;
+        }
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.getElementById(`slide-dot-${i}`);
+            if (dot) {
+                if (i === index) {
+                    dot.className = "w-1.5 h-1.5 rounded-full bg-white transition-all duration-300";
+                } else {
+                    dot.className = "w-1.5 h-1.5 rounded-full bg-white/40 transition-all duration-300";
+                }
+            }
+        }
+        resetAutoSlide();
+    }
+
+    function autoNextSlide() {
+        let next = (currentSlide + 1) % totalSlides;
+        setSlide(next);
+    }
+
+    function resetAutoSlide() {
+        if (slideInterval) clearInterval(slideInterval);
+        slideInterval = setInterval(autoNextSlide, 4000);
+    }
+
+    // Swipe / Drag gesture implementation
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
+    let dragThreshold = 40; // minimum drag distance in px to trigger slide change
+
+    if (swipeFrame && slideWrapper) {
+        // Mouse Events
+        swipeFrame.addEventListener('mousedown', (e) => {
+            if (e.button !== 0) return; // Only drag on left click
+            startDrag(e.clientX);
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            moveDrag(e.clientX);
+        });
+
+        window.addEventListener('mouseup', () => {
+            if (!isDragging) return;
+            endDrag();
+        });
+
+        // Touch Events
+        swipeFrame.addEventListener('touchstart', (e) => {
+            startDrag(e.touches[0].clientX);
+        }, { passive: true });
+
+        swipeFrame.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            moveDrag(e.touches[0].clientX);
+        }, { passive: true });
+
+        swipeFrame.addEventListener('touchend', () => {
+            if (!isDragging) return;
+            endDrag();
+        });
+
+        swipeFrame.addEventListener('touchcancel', () => {
+            if (!isDragging) return;
+            endDrag();
+        });
+    }
+
+    function startDrag(clientX) {
+        isDragging = true;
+        startX = clientX;
+        currentX = clientX;
+        
+        // Pause slide interval during interaction
+        if (slideInterval) clearInterval(slideInterval);
+        
+        // Remove transitions during drag for instant feedback
+        slideWrapper.style.transition = 'none';
+    }
+
+    function moveDrag(clientX) {
+        currentX = clientX;
+        const diffX = currentX - startX;
+        const frameWidth = swipeFrame.clientWidth;
+        
+        // Calculate translation offset in percentage
+        const dragPercent = (diffX / frameWidth) * 25;
+        let translatePercent = -(currentSlide * 25) + dragPercent;
+        
+        // Add resistance at bounds
+        if (translatePercent > 0) {
+            translatePercent /= 3;
+        } else if (translatePercent < -((totalSlides - 1) * 25)) {
+            const extra = translatePercent + ((totalSlides - 1) * 25);
+            translatePercent = -((totalSlides - 1) * 25) + (extra / 3);
+        }
+        
+        slideWrapper.style.transform = `translateX(${translatePercent}%)`;
+    }
+
+    function endDrag() {
+        isDragging = false;
+        const diffX = currentX - startX;
+        const frameWidth = swipeFrame.clientWidth;
+        
+        slideWrapper.style.transition = 'transform 0.5s ease-in-out';
+        
+        if (diffX < -dragThreshold && currentSlide < totalSlides - 1) {
+            // Swipe Left -> Go to Next Slide
+            setSlide(currentSlide + 1);
+        } else if (diffX > dragThreshold && currentSlide > 0) {
+            // Swipe Right -> Go to Previous Slide
+            setSlide(currentSlide - 1);
+        } else {
+            // Snap back to current slide
+            setSlide(currentSlide);
+        }
+    }
+
+    // Initialize carousel on load
+    resetAutoSlide();
+
+    // ----------------------------------------------------
+    // 5. SCROLL TRIGGER REVEALS
+    // ----------------------------------------------------
+    const revealElements = document.querySelectorAll('.reveal-element');
+    
+    function checkReveal() {
+        const triggerBottom = window.innerHeight * 0.85;
+        revealElements.forEach(el => {
+            const elTop = el.getBoundingClientRect().top;
+            if (elTop < triggerBottom) {
+                el.classList.add('active');
+            }
+        });
+    }
+
+    // Mobile nav toggle
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+        if (menu.classList.contains('hidden')) {
+            menu.classList.remove('hidden');
+            icon.innerText = "close";
+        } else {
+            menu.classList.add('hidden');
+            icon.innerText = "menu";
+        }
+    }
+
+    // Smooth scroll offset logic for header height
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            const target = document.querySelector(targetId);
+            if (target) {
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // ----------------------------------------------------
+    // 6. RSVP SUBMISSION HANDLER
+    // ----------------------------------------------------
+    function handleRSVPSubmit() {
+        const name = document.getElementById('rsvp-name').value.trim();
+        const guests = document.getElementById('rsvp-guests').value;
+        const options = document.getElementsByName('rsvp-option');
+        let selectedOption = 'Accept with Pleasure';
+        
+        for (const opt of options) {
+            if (opt.checked) {
+                selectedOption = opt.value;
+                break;
+            }
+        }
+        
+        if (!name) {
+            alert("Please enter your name to confirm RSVP.");
+            return;
+        }
+        
+        // Hide form card and display success message locally
+        const rsvpCard = document.getElementById('rsvp-card-content');
+        const successMsg = document.getElementById('rsvp-success-message');
+        const thankYouText = document.getElementById('rsvp-thank-you-text');
+        
+        rsvpCard.classList.add('hidden');
+        successMsg.classList.remove('hidden');
+        successMsg.classList.add('flex');
+        
+        thankYouText.innerHTML = `Thank you, <strong>${name}</strong>! Your RSVP response (<em>${selectedOption} - ${guests} Guest(s)</em>) has been recorded successfully.`;
+    }
+</script>
+
+</body>
+</html>
